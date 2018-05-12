@@ -9,8 +9,7 @@
   "content_scripts": [
     {
       "matches": [
-        "*://*.gmail.com/*",
-        "*://mail.google.com/*"
+        "*://*.youtube.com/*"
       ],
       "js": [
         "content_script.js"
