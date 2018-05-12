@@ -1,8 +1,8 @@
 # Cross browser add-on adfree-youtube
-A cross browser add-on to remove all annoying Ads and Banners from YouTube.
+A cross browser add-on to remove all annoying Ads and Banners from YouTube. Works well with Firefox & Chrome.
 
 # Firefox listing link
-https://addons.mozilla.org/en-US/firefox/addon/ad-free-youtube/
+https://addons.mozilla.org/en-US/firefox/addon/adfree-youtube/
 
 # Description
 * This add-on automatically hides all annoying ad banners from YouTube page.
