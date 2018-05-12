@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "AdBlocker for YouTube",
   "description": "Removes all annoying Ads and Banners from YouTube",
-  "version": "0.0.1",
+  "version": "0.1.2",
   "icons": {
     "64": "icons/icon.png"
   },
@@ -15,5 +15,11 @@
         "content_script.js"
       ]
     }
+  ],
+  "options_ui": {
+    "page": "options/index.html"
+  },
+  "permissions": [
+    "storage"
   ]
 }
