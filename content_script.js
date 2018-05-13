@@ -42,14 +42,18 @@ blockAd = () => {
 findAdDiv = () => {
   adDivArray = [];
   videoFrameFooterAd = document.querySelector('.ad-container');
-  sidebarAd = document.querySelector('ytd-iframe-companion-renderer');
+  sidebarVideoAd = document.querySelector('ytd-iframe-companion-renderer');
+  siderbarAdBanner = document.querySelector('ytd-companion-slot-renderer');
   homepageAd = document.querySelector('#ad-iframe');
 
   if (videoFrameFooterAd && videoFrameFooterAd.style.display !== 'none') {
     adDivArray.push(videoFrameFooterAd);
   }
-  if (sidebarAd && sidebarAd.style.display !== 'none') {
-    adDivArray.push(sidebarAd);
+  if (sidebarVideoAd && sidebarVideoAd.style.display !== 'none') {
+    adDivArray.push(sidebarVideoAd);
+  }
+  if (siderbarAdBanner && siderbarAdBanner.style.display !== 'none') {
+    adDivArray.push(siderbarAdBanner);
   }
   if (homepageAd && homepageAd.style.display !== 'none') {
     adDivArray.push(homepageAd);
