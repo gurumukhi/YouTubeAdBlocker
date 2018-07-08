@@ -65,15 +65,20 @@ findAdDiv = () => {
 let storageItem = browser.storage.local.get();
 storageItem.then((result) => {
   // Setting ANNOTATIONS off
+  let disabledAnnotationsFrom = null;
   document.querySelectorAll('div.ytp-panel-menu div.ytp-menuitem[role=menuitemcheckbox]').forEach(d => {
     if(d.innerText == 'Annotations' && d.getAttribute('aria-checked') == 'true') {
-      console.log(d);
+      disabledAnnotationsFrom = d;
       d.click();
     }
   });
   // Blocking ADS
   if (result.isDebugModeOn) {
     console.log('Hi from AdFreeYouTube, we are here to give you ad free experience on YouTube.');
+    if (disabledAnnotationsFrom) {
+      console.log('Disabled annotations');
+      console.log(disabledAnnotationsFrom);
+    }
     blockAdWithDebugging();
     setInterval(blockAdWithDebugging, 5000);
   } else {
