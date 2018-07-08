@@ -64,6 +64,14 @@ findAdDiv = () => {
 // Initialization
 let storageItem = browser.storage.local.get();
 storageItem.then((result) => {
+  // Setting ANNOTATIONS off
+  document.querySelectorAll('div.ytp-panel-menu div.ytp-menuitem[role=menuitemcheckbox]').forEach(d => {
+    if(d.innerText == 'Annotations' && d.getAttribute('aria-checked') == 'true') {
+      console.log(d);
+      d.click();
+    }
+  });
+  // Blocking ADS
   if (result.isDebugModeOn) {
     console.log('Hi from AdFreeYouTube, we are here to give you ad free experience on YouTube.');
     blockAdWithDebugging();
